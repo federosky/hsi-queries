@@ -1,0 +1,117 @@
+#footer {padding:0 !important;}
+#content-footer {height:auto;}
+#button-back-container {float:right;margin-right:10px;}
+
+div.breadcrumbs{
+	padding-top:0 !important;
+}
+div.breadcrumbs span {font-weight:normal;}
+div.list-view {
+	padding:0 10px;
+}
+.list-view-loading {background:none !important;}
+.list-view .items {
+	font-size:16px;
+	height:394px;
+	overflow:auto;
+}
+.list-view .items .race-header {
+	background:#707070;
+	padding:4px;
+	color:#ffffff;
+}
+.list-view .items table {
+	border-collapse:collapse;
+	margin: 0 !important;
+	border:1px solid #cccccc;
+}
+.list-view .portlet-container .portlet-content{
+	background:#ffffff !important;
+	padding:0 !important;
+	margin:0 !important;
+}
+.list-view .pager {
+	text-align:center !important;
+}
+
+ul.yiiPager, ul.yiiPager li.previous, ul.yiiPager li.next, ul.yiiPager li.controls {
+	display:inline-block !important;
+}
+
+ul.yiiPager a:link, ul.yiiPager a:visited {
+    border: 0 !important;
+    color: #808080 !important;
+    font-weight:bold !important;
+    padding: 0 !important;
+    text-decoration: none;
+}
+span#visibility-toggler {
+	display:inline-block;
+	border:0;
+	padding:0;
+	margin:0;
+	height:36px;
+	width:180px;
+}
+span#visibility-toggler.toggler-label.not-raced {
+	background:url(../images/button-not-raced.png) 0 0 no-repeat;
+}
+span#visibility-toggler.toggler-button.show-details,span#visibility-toggler.toggler-button.show-results {
+	cursor:pointer;
+}	
+span#visibility-toggler.toggler-button.show-details {
+	background:url(../images/button-show-details.png) 0 0 no-repeat;
+}
+span#visibility-toggler.toggler-button.show-results {
+	background:url(../images/button-show-results.png) 0 0 no-repeat;
+}
+
+/* * Scroller * */
+div#scrollerContainer {
+	float:right;
+	padding:1px;
+	position:relative;
+	width:50px;
+	height:392px;
+}
+div#scrollerContainer span#button-scroll-up, div#scrollerContainer span#button-scroll-down{
+	position:absolute;
+	display:inline-block;
+	height:50px;
+	width:50px;
+	cursor:pointer;
+}
+div#scrollerContainer span#button-scroll-up {
+	background:url(../images/scroller/button-scroll-up.png) 0 0 no-repeat;
+}
+div#scrollerContainer span#button-scroll-down {
+	background:url(../images/scroller/button-scroll-down.png) 0 0 no-repeat;
+	bottom:0;
+}
+
+.list-view .items table th, .order, .kg_spc, .herraje, .kg_jockey {
+	text-align:center;
+}
+.list-view .items table tr {border-bottom:1px solid #999999;}
+.spc, .jockey, .jockey2, .jockey3, .jockey4 {
+	text-transform:uppercase;
+}
+.order {width:5.58%;}
+.spc {width:38.84%;}
+.kg_spc {width:7.1%;}
+.herraje {width:11.42%;}
+.jockey, .jockey2, .jockey3, .jockey4 {width:30.96%}
+.kg_jockey {width:6.1%}
+
+/*** Categoria Jockey ***/
+.not-running * {color:#777777;background:#ffe0e0 !important;}
+.jockey2{color:#ffcc33;}
+.jockey3{color:#00CC00;}
+.jockey4{color:#ff3333;}
+.retired {text-align:center;color:#ff6363;text-transform:uppercase;}
+div.tratado{
+	float:right;
+	color:#009966;
+	font-size:10px;
+	font-weight:bold;
+}

@@ -1,0 +1,55 @@
+2012/06/24 14:42:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection falló al abrir la conexion a la base de datos: SQLSTATE[42000] [1049] Unknown database 'hipodromo_development'' in /home/federico/workspace/hsi-queries/framework/db/CDbConnection.php:287
+Stack trace:
+#0 /home/federico/workspace/hsi-queries/framework/db/CDbConnection.php(260): CDbConnection->open()
+#1 /home/federico/workspace/hsi-queries/framework/db/CDbConnection.php(238): CDbConnection->setActive(true)
+#2 /home/federico/workspace/hsi-queries/framework/base/CModule.php(372): CDbConnection->init()
+#3 /home/federico/workspace/hsi-queries/framework/base/CApplication.php(426): CModule->getComponent('db')
+#4 /home/federico/workspace/hsi-queries/framework/db/ar/CActiveRecord.php(589): CApplication->getDb()
+#5 /home/federico/workspace/hsi-queries/framework/db/ar/CActiveRecord.php(2167): CActiveRecord->getDbConnection()
+#6 /home/federico/workspace/hsi-queries/framework/db/ar/CActiveRecord.php(353): CActiveRecordMetaData->__construct(Object(Meeting))
+#7 /home/federico/workspace/hsi-queries/protected/models/Meeting.php(20): CActiveRecord::model('Meeting')
+#8 /home/federico/workspace/hsi-boards/lib/process_details.php(71): Meeting::model()
+#9 {main} REQUEST_URI=/lib/process_details.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=13405595667454
+2012/06/24 14:55:43 [error] [php] file_put_contents(/home/federico/workspace/hsi-boards/inc/../tmp/ivr/borrados/1.txt): failed to open stream: Permission denied (/home/federico/workspace/hsi-boards/inc/ivr.generators.php:115)
+Stack trace:
+#0 unknown(0): CWebApplication->handleError()
+#1 /home/federico/workspace/hsi-boards/inc/ivr.generators.php(115): file_put_contents()
+#2 /home/federico/workspace/hsi-boards/lib/process_details.php(173): IVR_generate_race_defaults()
+REQUEST_URI=/lib/process_details.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=13405599037955
+in /home/federico/workspace/hsi-boards/inc/ivr.generators.php (115)
+in /home/federico/workspace/hsi-boards/lib/process_details.php (173)
+2012/06/24 16:26:15 [error] [php] file_put_contents(/home/federico/workspace/hsi-boards/inc/../tmp/ivr/borrados/1.txt): failed to open stream: Permission denied (/home/federico/workspace/hsi-boards/inc/ivr.generators.php:115)
+Stack trace:
+#0 unknown(0): CWebApplication->handleError()
+#1 /home/federico/workspace/hsi-boards/inc/ivr.generators.php(115): file_put_contents()
+#2 /home/federico/workspace/hsi-boards/lib/process_details.php(173): IVR_generate_race_defaults()
+REQUEST_URI=/lib/process_details.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=13405658067386
+in /home/federico/workspace/hsi-boards/inc/ivr.generators.php (115)
+in /home/federico/workspace/hsi-boards/lib/process_details.php (173)
+2012/06/24 20:45:13 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/federico/workspace/hsi-queries/assets" es inválido. Verifique que el directorio exista y tenga permisos de escritura por el proceso que corre el servidor Web.' in /home/federico/workspace/hsi-queries/framework/web/CAssetManager.php:98
+Stack trace:
+#0 /home/federico/workspace/hsi-queries/framework/web/CAssetManager.php(83): CAssetManager->setBasePath('/home/federico/...')
+#1 /home/federico/workspace/hsi-queries/framework/web/CAssetManager.php(192): CAssetManager->getBasePath()
+#2 /home/federico/workspace/hsi-queries/framework/zii/widgets/CListView.php(162): CAssetManager->publish('/home/federico/...')
+#3 /home/federico/workspace/hsi-queries/framework/web/CBaseController.php(140): CListView->init()
+#4 /home/federico/workspace/hsi-queries/framework/web/CBaseController.php(165): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /home/federico/workspace/hsi-queries/protected/views/race/meetingGroupList.php(28): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /home/federico/workspace/hsi-queries/framework/web/CBaseController.php(119): require('/home/federico/...')
+#7 /home/federico/workspace/hsi-queries/framework/web/CBaseController.php(88): CBaseController->renderInternal('/home/federico/...', Array, true)
+#8 /home/federico/workspace/hsi-queries/framework/web/CController.php(833): CBaseController->renderFile('/home/federico/...', Array, true)
+#9 /home/federico/workspace/hsi-queries/framework/web/CController.php(746): CController->renderPartial('meetingGroupLis...', Array, true)
+#10 /home/federico/workspace/hsi-queries/protected/controllers/RaceController.php(204): CController->render('meetingGroupLis...', Array)
+#11 /home/federico/workspace/hsi-queries/framework/web/actions/CInlineAction.php(57): RaceController->actionCurrentMeetingList()
+#12 /home/federico/workspace/hsi-queries/framework/web/CController.php(300): CInlineAction->run()
+#13 /home/federico/workspace/hsi-queries/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /home/federico/workspace/hsi-queries/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#15 /home/federico/workspace/hsi-queries/framework/web/CController.php(1088): CFilter->filter(Object(CFilterChain))
+#16 /home/federico/workspace/hsi-queries/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/federico/workspace/hsi-queries/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/federico/workspace/hsi-queries/framework/web/CController.php(283): CFilterChain->run()
+#19 /home/federico/workspace/hsi-queries/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/federico/workspace/hsi-queries/framework/web/CWebApplication.php(328): CController->run('currentMeetingL...')
+#21 /home/federico/workspace/hsi-queries/framework/web/CWebApplication.php(121): CWebApplication->runController('race/currentMee...')
+#22 /home/federico/workspace/hsi-queries/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#23 /home/federico/workspace/hsi-queries/index.php(13): CApplication->run()
+#24 {main} REQUEST_URI=/index.php?r=race/currentMeetingList
