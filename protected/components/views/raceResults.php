@@ -42,7 +42,7 @@ foreach( $results as $key => $result ){
 			<tr>
 				<td class="mark"><?php echo(sprintf('%d&ordm;',$data['puesto']))?></td>
 				<td><?php echo(sprintf('%d',$data['orden']))?></td>
-				<td><?=(!empty($data['difere']))?$data['difere']:'&nbsp;-&nbsp;';?></td>
+				<td><?php echo(!empty($data['difere']))?$data['difere']:'&nbsp;-&nbsp;';?></td>
 				<td>
 				<?php
 				if( !empty($data['apuestas']['ganador']) ){

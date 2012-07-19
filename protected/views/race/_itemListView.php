@@ -7,6 +7,7 @@
 	&nbsp;Tiempo: <?php echo(formatTimeEnlapsed($data->time_enlapsed));?>
 	<?php endif;?>
 </div>
+<?php if( !$data->raced ):?>
 <?php $this->widget('RaceDetails',
 		array(
 			'race'        => $data,
@@ -16,7 +17,16 @@
 		)
 );
 ?>
-<?php if( $data->raced ):?>
+<?php else:?>
+<?php $this->widget('RaceDetailsRaced',
+		array(
+			'race'        => $data,
+			'htmlOptions' => array(
+				'class' => 'portlet-container'
+			)
+		)
+);
+?>
 <?php $this->widget('RaceResults',
 		array(
 			'race' => $data,
