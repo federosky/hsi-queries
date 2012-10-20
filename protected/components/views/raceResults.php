@@ -78,9 +78,7 @@ foreach( $results as $key => $result ){
 		</tbody>
 		<tfoot></tfoot>
 	</table>
-</div>
-<br/>
-<div class="race-results">
+	<br/>
 	<table class="content" id="ERR">
 		<thead>
 			<tr><th colspan="3">DIVIDENDOS</th></tr>
