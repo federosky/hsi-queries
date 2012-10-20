@@ -17,14 +17,22 @@ class CCustomLinkPager extends CLinkPager
 		$this->prevPageLabel = CHtml::image('images/pager/button-previous.png', '&lg;');
 		$this->nextPageLabel = CHtml::image('images/pager/button-next.png', '&gt;');
 	}
+	
 	/**
+	 * Creates a custom element
 	 * 
+	 * @param unknown_type $label
+	 * @param unknown_type $action
+	 * @param unknown_type $class
+	 * @param unknown_type $hidden
+	 * @param unknown_type $selected
+	 * @return string
 	 */
 	protected function createActionButton($label, $action, $class, $hidden, $selected)
 	{
 		if($hidden || $selected)
 			$class.=' '.($hidden ? self::CSS_HIDDEN_PAGE : self::CSS_SELECTED_PAGE);
-		$htmlOptions = array('id'=>'visibility-toggler');
+		$htmlOptions = array('id'=>$action);
 		return '<li class="'.$class.'">'.CHtml::tag('span', $htmlOptions, '', true).'</li>';
 	}
 	
@@ -52,7 +60,8 @@ class CCustomLinkPager extends CLinkPager
 		// Action button/label
 		if( $this->enableActionButton)
 		{
-			$buttons[] = $this->createActionButton($this->actionButtonLabel, $action, 'controls', $hidden, $selected);
+			$action = 'visibility-toggler';
+			$buttons[] = $this->createActionButton($this->actionButtonLabel, $action, 'controls', false, false);
 		}
 
 		// next page

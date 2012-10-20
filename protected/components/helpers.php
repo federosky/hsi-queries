@@ -38,3 +38,38 @@ function formatTimeEnlapsed( $time_enlapsed )
 	}
 	return $formatted;
 }
+
+/**
+ * 
+ */
+function laneTypeConvert($text = '')
+{
+	$map = array(
+		'RCO' => 'Arena Codo',
+		'RCN' => 'Arena Codo Nuevo',
+		'RDI' => 'Arena Diagonal',
+		'RRE' => 'Arena Recta',
+		'CCO' => 'Cesped Codo',
+		'CCN' => 'Cesped Codo Nuevo',
+		'CDI' => 'Cesped Diagonal',
+		'CRE' => 'Cesped Recta'
+	);
+	if( !empty($text) && array_key_exists($text, $map) ){
+		$text = $map[$text];
+	}
+	return $text;
+}
+
+function laneStateConvert($text = '')
+{
+	$map = array(
+		'N' => 'Normal',
+		'P' => 'Pesada',
+		'F' => 'Fangosa',
+		'H' => 'H&uacute;meda'
+	);
+	if( !empty($text) && array_key_exists($text, $map) ){
+		$text = $map[$text];
+	}
+	return $text;
+}
