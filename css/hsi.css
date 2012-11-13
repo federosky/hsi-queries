@@ -125,13 +125,11 @@ div#scrollerContainer span#button-scroll-down {
 .race-results {height:360px;overflow:auto;}
 
 .race-detail table  {position:relative;}
-/* .race-detail table thead {position: absolute; top:2px;} */
-/* .race-detail table thead tr.fixed {display:table; position:fixed;} */
-/* .race-detail table tbody {height:374px;overflow:auto;} */
 .race-detail table tbody td {padding:5px 2px;}
 .race-detail table tbody td.keeper {padding-right:0;}
 
-.list-view .items table th, .order, .spc-weight, .horseshoe, .jockey-weigth, .spc-age, .would-paid, .last-ones {
+.list-view .items table th, .order, .spc-weight, .horseshoe, .jockey-weigth, .spc-age, .last-ones, .difference,
+.winner, .second, .third {
 	text-align:center;
 }
 
@@ -145,16 +143,17 @@ div#scrollerContainer span#button-scroll-down {
 }
 
 /* Total: 990px */
-.stud {width:160px;}
-.last-ones {width:72px;}
-.order {width:30px;}
-.spc {width:170px;}
-.spc-weight {width:37px;}
-.spc-age {width:38px;}
-.horseshoe {width:60px;}
+.race-detail-header .stud, .race-detail .stud {width:160px;}
+.race-detail-header .last-ones, .race-detail .last-ones {width:72px;}
+.race-detail-header .order, .race-detail .order {width:30px;}
+.race-detail-header .spc, .race-detail .spc {width:170px;}
+.race-detail-header .spc-weight, .race-detail .spc-weight {width:40px;}
+.race-detail-header .spc-age, .race-detail .spc-age {width:38px;}
+.race-detail-header .horseshoe, .race-detail .horseshoe {width:60px;}
+.race-detail-header .jockey-weight, .race-detail .jockey-weight {width:36px}
+.race-detail-header .keeper, .race-detail .keeper {width:164px;}
+.race-detail-header .would-paid {text-align:right; padding-right:25px !important;}
 .jockey, .jockey2, .jockey3, .jockey4 {width:182px;}
-.jockey-weight {width:36px}
-.keeper {width:164px;}
 
 .detail-raced .standing {width:60px; font-weight:bold;}
 .detail-raced .difference {width:92px; text-align:center;}
@@ -182,3 +181,5 @@ div.tratado{
 	font-size:10px;
 	font-weight:bold;
 }
+
+.race-result td.order {text-align:right;}
