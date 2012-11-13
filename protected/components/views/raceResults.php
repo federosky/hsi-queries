@@ -40,32 +40,32 @@ foreach( $results as $key => $result ){
 		<?php $count = 1;?>
 		<?php foreach( $race_data as $order => $data):?>
 			<tr>
-				<td class="mark"><?php echo(sprintf('%d&ordm;',$data['puesto']))?></td>
-				<td><?php echo(sprintf('%d',$data['orden']))?></td>
-				<td><?php echo(!empty($data['difere']))?$data['difere']:'&nbsp;-&nbsp;';?></td>
-				<td>
+				<td class="standing"><?php echo(sprintf('%d&ordm;',$data['puesto']))?></td>
+				<td class="order"><?php echo(sprintf('%d',$data['orden']))?></td>
+				<td class="difference"><?php echo(!empty($data['difere']))?$data['difere']:'&nbsp;-&nbsp;';?></td>
+				<td class="winner">
 				<?php
 				if( !empty($data['apuestas']['ganador']) ){
-					echo(sprintf('%.2f',$data['apuestas']['ganador']));
+					echo(sprintf('%.2F',$data['apuestas']['ganador']));
 				}
 				else{ 
 					echo('&nbsp;'); 
 				} ?>
 				</td>
-				<td>
+				<td class="second">
 				<?php
 				if( !empty($data['apuestas']['segundo']) ){
-					echo(sprintf('%.2f',$data['apuestas']['segundo']));
+					echo(sprintf('%.2F',$data['apuestas']['segundo']));
 				}
 				else{ 
 					if( !empty($data['apuestas']['ganador']) ) echo('&nbsp;-&nbsp;');
 					else echo('&nbsp;'); 
 				} ?>
 				</td>
-				<td>
+				<td class="third">
 				<?php
 				if( !empty($data['apuestas']['tercero']) ){
-					echo(sprintf('%.2f',$data['apuestas']['tercero']));
+					echo(sprintf('%.2F',$data['apuestas']['tercero']));
 				}
 				else{ 
 					if( $count <= 3 ) echo('&nbsp;-&nbsp;');

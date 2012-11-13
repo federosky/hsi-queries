@@ -34,7 +34,7 @@
 					<td class="jockey<?php echo((is_numeric($entry->categojoc))?sprintf('%d',$entry->categojoc):'')?>"><?php echo strtolower($entry->jockey)?></td>
 					<td class="jockey-weight"><?php echo formatWeight($entry->kilosrea)?></td>
 					<td class="last-ones"><?php echo($entry->ultimas)?></td>
-					<td class="would-paid"><?php echo($entry->divipa)?></td>
+					<td class="would-paid"><?php echo(number_format($entry->divipa,2,'.',''))?></td>
 				</tr>
 			<?php endforeach;?>
 			</tbody>
