@@ -152,8 +152,10 @@ div#scrollerContainer span#button-scroll-down {
 .race-detail-header .horseshoe, .race-detail .horseshoe {width:60px;}
 .race-detail-header .jockey-weight, .race-detail .jockey-weight {width:36px}
 .race-detail-header .keeper, .race-detail .keeper {width:164px;}
-.race-detail-header .would-paid {text-align:right; padding-right:25px !important;}
+.race-detail-header .would-paid {text-align:right; padding-right:10px !important;}
 .jockey, .jockey2, .jockey3, .jockey4 {width:182px;}
+
+.race-detail td.would-paid {text-align:right;padding-right:10px;}
 
 .detail-raced .standing {width:60px; font-weight:bold;}
 .detail-raced .difference {width:92px; text-align:center;}
@@ -166,7 +168,7 @@ div#scrollerContainer span#button-scroll-down {
 .detail-raced .jockey, .detail-raced .jockey2, .detail-raced .jockey3, .detail-raced .jockey4 {width:200px;}
 .detail-raced .jockey-weight {width:40px; text-align:center;}
 .detail-raced .keeper {width:158px;}
-.detail-raced .column-header.would-paid {width:80px; text-align:center;}
+.detail-raced .column-header.would-paid {width:90px; text-align:right;}
 
 
 /*** Categoria Jockey ***/

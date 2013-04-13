@@ -2,8 +2,9 @@
 	<?php echo(Yii::t('translations','Race').'&nbsp;'.$data->number.'&nbsp;')?>
 	<?php echo CHtml::encode($data->title); ?>
 	&nbsp;Distancia: <?php echo $data->distance ?>mts.
-	&nbsp;Pista: <?php echo(laneTypeConvert($data->lane) .', estado '.laneStateConvert($data->lane_state))?>
-	<?php if( $data->time_enlapsed ):?>
+	&nbsp;Pista: <?php echo(laneTypeConvert($data->lane).'.&nbsp;')?>
+	<?php if (!empty($data->lane_state)) echo('Estado de la pista: '.laneStateConvert($data->lane_state).'.')?>
+	<?php if( $data->raced && !empty($data->time_enlapsed) ):?>
 	&nbsp;Tiempo: <?php echo(formatTimeEnlapsed($data->time_enlapsed));?>
 	<?php endif;?>
 </div>

@@ -47,10 +47,10 @@ return array(
 		*/
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=hipodromo',
+			'connectionString' => 'mysql:host=localhost;dbname=hipodromo_production',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => 'Absolut',
+			'username' => 'carreras',
+			'password' => 'piernodoyuna',
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(

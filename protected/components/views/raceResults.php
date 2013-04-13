@@ -90,9 +90,9 @@ foreach( $results as $key => $result ){
 				$ordenes[$i] = ltrim($ordenes[$i],' 0');
 			$html = "\t\t\t".'<tr><td>'.$apuesta['nombre'].'</td>';
 			$html.= '<td>'.implode(' - ',$ordenes).'</td>';
-			$html.= '<td style="text-align:center;">';
+			$html.= '<td style="text-align:right;padding-right:10px;">';
 			if( !empty($apuesta['importe']) ){
-				$html.= sprintf('%.2f',$apuesta['importe']);
+				$html.= sprintf('%.2F',$apuesta['importe']);
 			} else $html.= strtoupper($apuesta['descripcio']);
 			$html.= '</td>'."\n\t\t\t".'</tr>';
 			echo $html;
