@@ -1,7 +1,7 @@
 <div class="race-detail-header clearfix">
+	<div class="column-header order">N&ordm;</div>
 	<div class="column-header stud">Stud</div>
 	<div class="column-header last-ones">4 &Uacute;ltimas</div>
-	<div class="column-header order">N&ordm;</div>
 	<div class="column-header spc">S.P.C.</div>
 	<div class="column-header spc-weight">Peso</div>
 	<div class="column-header spc-age">Edad</div>
@@ -18,17 +18,17 @@
 			<?php foreach ($raceEntries as $entry):?>
 			<?php if( !empty($entry->puesto) && !is_numeric($entry->puesto) ):?>
 				<tr class="not-running">
+					<td class="order"><?php echo(ltrim($entry->orden,'0'))?></td>
 					<td class="stud">&nbsp;</td>
 					<td class="last-ones">&nbsp;</td>
-					<td class="order"><?php echo(ltrim($entry->orden,'0'))?></td>
 					<td class="spc"><?php echo strtolower($entry->ejemplar)?></td>
 					<td class="kg_spc retired" colspan="6">(<?php echo(Yii::t('translations','Retired').':'.$entry->puesto)?>)</td>
 				</tr>
 			<?php else:?>
 				<tr>
+					<td class="order"><?php echo(ltrim($entry->orden,'0'))?></td>
 					<td class="stud"><?php echo($entry->caballer)?></td>
 					<td class="last-ones"><?php echo($entry->ultimas)?></td>
-					<td class="order"><?php echo(ltrim($entry->orden,'0'))?></td>
 					<td class="spc">
 					<?php echo strtolower($entry->ejemplar)?>
 					<?php if( !empty($entry->tratamient) ):?>
