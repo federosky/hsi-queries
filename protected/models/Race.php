@@ -12,7 +12,7 @@
  * @property string $lane
  * @property string $lane_state
  * @property integer $distance
- * @property string $time_enlapsed
+ * @property integer $time_enlapsed
  * @property string $createdon
  */
 class Race extends CActiveRecord
@@ -45,7 +45,7 @@ class Race extends CActiveRecord
 			array('number, meeting_id, title', 'required'),
 			array('number, meeting_id, distance, raced', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>256),
-			array('type, lane, lane_state, time_enlapsed', 'length', 'max'=>32),
+			array('type, lane, lane_state', 'length', 'max'=>32),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('number, meeting_id, title, type, lane, lane_state, distance', 'safe', 'on'=>'search'),

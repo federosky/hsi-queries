@@ -41,30 +41,6 @@
  * @property string $nusere
  * @property string $modificado
  * @property integer $disputada
- * @property string $horario
- * @property integer $edaddesde
- * @property integer $edadhasta
- * @property string $sexo
- * @property integer $ganadasdes
- * @property integer $ganadashas
- * @property string $condicion
- * @property string $apuestas
- * @property string $tierecord
- * @property string $totalprem1
- * @property string $totalprem2
- * @property string $totalprem3
- * @property string $totalprem4
- * @property string $totalprem5
- * @property string $sexocab
- * @property string $ultimas
- * @property string $pelo
- * @property string $padre
- * @property string $madre
- * @property string $abuelo
- * @property string $criador
- * @property string $nacioel
- * @property string $premiotota
- * @property string $condicion2
  */
 class RaceEntry extends CActiveRecord
 {
@@ -93,23 +69,19 @@ class RaceEntry extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('fecha, nombre, tipo, pista, estado, distancia, orden, forfait, puesto, difere, divipa, kiloscab, kilos, kilosrea, tratamient, herraje, ejemplar, caballer, cuidador, jockey, categojoc, capataz, peon, sereno, nuejem, nucaba, nucuid, nujock, nucapa, nupeon, nusere, modificado, horario', 'required'),
-			array('carrera, distancia, forfait, disputada, edaddesde, edadhasta, ganadasdes, ganadashas', 'numerical', 'integerOnly'=>true),
+			array('fecha, nombre, tipo, pista, estado, distancia, orden, forfait, puesto, difere, divipa, kiloscab, kilos, kilosrea, tratamient, herraje, ejemplar, caballer, cuidador, jockey, categojoc, capataz, peon, sereno, nuejem, nucaba, nucuid, nujock, nucapa, nupeon, nusere, modificado', 'required'),
+			array('carrera, distancia, forfait, disputada', 'numerical', 'integerOnly'=>true),
 			array('divipa, kiloscab, kilos, kilosrea', 'numerical'),
 			array('hipodromo, tipo, estado, categojoc', 'length', 'max'=>8),
 			array('nombre, ejemplar, cuidador, jockey, capataz, peon, sereno, nuejem, nucaba, nucuid, nujock, nucapa, nupeon, nusere', 'length', 'max'=>128),
-			array('pista, tiempo, horario', 'length', 'max'=>16),
-			array('orden, sexo', 'length', 'max'=>4),
+			array('pista, tiempo', 'length', 'max'=>16),
+			array('orden', 'length', 'max'=>4),
 			array('puesto', 'length', 'max'=>32),
-			array('difere, caballer, apuestas, tierecord', 'length', 'max'=>255),
+			array('difere, caballer', 'length', 'max'=>255),
 			array('tratamient, herraje', 'length', 'max'=>64),
-			array('totalprem1, totalprem2, totalprem3, totalprem4, totalprem5, ultimas, premiotota', 'length', 'max'=>10),
-			array('sexocab, pelo', 'length', 'max'=>1),
-			array('padre, madre, abuelo, criador', 'length', 'max'=>100),
-			array('condicion, nacioel, condicion2', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, hipodromo, fecha, carrera, nombre, tipo, pista, estado, distancia, tiempo, orden, forfait, puesto, difere, divipa, kiloscab, kilos, kilosrea, tratamient, herraje, ejemplar, caballer, cuidador, jockey, categojoc, capataz, peon, sereno, nuejem, nucaba, nucuid, nujock, nucapa, nupeon, nusere, modificado, disputada, horario, edaddesde, edadhasta, sexo, ganadasdes, ganadashas, condicion, apuestas, tierecord, totalprem1, totalprem2, totalprem3, totalprem4, totalprem5, sexocab, ultimas, pelo, padre, madre, abuelo, criador, nacioel, premiotota, condicion2', 'safe', 'on'=>'search'),
+			array('id, hipodromo, fecha, carrera, nombre, tipo, pista, estado, distancia, tiempo, orden, forfait, puesto, difere, divipa, kiloscab, kilos, kilosrea, tratamient, herraje, ejemplar, caballer, cuidador, jockey, categojoc, capataz, peon, sereno, nuejem, nucaba, nucuid, nujock, nucapa, nupeon, nusere, modificado, disputada', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -167,30 +139,6 @@ class RaceEntry extends CActiveRecord
 			'nusere' => 'Nusere',
 			'modificado' => 'Modificado',
 			'disputada' => 'Disputada',
-			'horario' => 'Horario',
-			'edaddesde' => 'Edaddesde',
-			'edadhasta' => 'Edadhasta',
-			'sexo' => 'Sexo',
-			'ganadasdes' => 'Ganadasdes',
-			'ganadashas' => 'Ganadashas',
-			'condicion' => 'Condicion',
-			'apuestas' => 'Apuestas',
-			'tierecord' => 'Tierecord',
-			'totalprem1' => 'Totalprem1',
-			'totalprem2' => 'Totalprem2',
-			'totalprem3' => 'Totalprem3',
-			'totalprem4' => 'Totalprem4',
-			'totalprem5' => 'Totalprem5',
-			'sexocab' => 'Sexocab',
-			'ultimas' => 'Ultimas',
-			'pelo' => 'Pelo',
-			'padre' => 'Padre',
-			'madre' => 'Madre',
-			'abuelo' => 'Abuelo',
-			'criador' => 'Criador',
-			'nacioel' => 'Nacioel',
-			'premiotota' => 'Premiotota',
-			'condicion2' => 'Condicion2',
 		);
 	}
 
@@ -242,30 +190,6 @@ class RaceEntry extends CActiveRecord
 		$criteria->compare('nusere',$this->nusere,true);
 		$criteria->compare('modificado',$this->modificado,true);
 		$criteria->compare('disputada',$this->disputada);
-		$criteria->compare('horario',$this->horario,true);
-		$criteria->compare('edaddesde',$this->edaddesde);
-		$criteria->compare('edadhasta',$this->edadhasta);
-		$criteria->compare('sexo',$this->sexo,true);
-		$criteria->compare('ganadasdes',$this->ganadasdes);
-		$criteria->compare('ganadashas',$this->ganadashas);
-		$criteria->compare('condicion',$this->condicion,true);
-		$criteria->compare('apuestas',$this->apuestas,true);
-		$criteria->compare('tierecord',$this->tierecord,true);
-		$criteria->compare('totalprem1',$this->totalprem1,true);
-		$criteria->compare('totalprem2',$this->totalprem2,true);
-		$criteria->compare('totalprem3',$this->totalprem3,true);
-		$criteria->compare('totalprem4',$this->totalprem4,true);
-		$criteria->compare('totalprem5',$this->totalprem5,true);
-		$criteria->compare('sexocab',$this->sexocab,true);
-		$criteria->compare('ultimas',$this->ultimas,true);
-		$criteria->compare('pelo',$this->pelo,true);
-		$criteria->compare('padre',$this->padre,true);
-		$criteria->compare('madre',$this->madre,true);
-		$criteria->compare('abuelo',$this->abuelo,true);
-		$criteria->compare('criador',$this->criador,true);
-		$criteria->compare('nacioel',$this->nacioel,true);
-		$criteria->compare('premiotota',$this->premiotota,true);
-		$criteria->compare('condicion2',$this->condicion2,true);
 
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,

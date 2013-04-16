@@ -40,32 +40,32 @@ foreach( $results as $key => $result ){
 		<?php $count = 1;?>
 		<?php foreach( $race_data as $order => $data):?>
 			<tr>
-				<td class="standing"><?php echo(sprintf('%d&ordm;',$data['puesto']))?></td>
-				<td class="order"><?php echo(sprintf('%d',$data['orden']))?></td>
-				<td class="difference"><?php echo(!empty($data['difere']))?$data['difere']:'&nbsp;-&nbsp;';?></td>
-				<td class="winner">
+				<td class="mark"><?php echo(sprintf('%d&ordm;',$data['puesto']))?></td>
+				<td><?php echo(sprintf('%d',$data['orden']))?></td>
+				<td><?=(!empty($data['difere']))?$data['difere']:'&nbsp;-&nbsp;';?></td>
+				<td>
 				<?php
 				if( !empty($data['apuestas']['ganador']) ){
-					echo(sprintf('%.2F',$data['apuestas']['ganador']));
+					echo(sprintf('%.2f',$data['apuestas']['ganador']));
 				}
 				else{ 
 					echo('&nbsp;'); 
 				} ?>
 				</td>
-				<td class="second">
+				<td>
 				<?php
 				if( !empty($data['apuestas']['segundo']) ){
-					echo(sprintf('%.2F',$data['apuestas']['segundo']));
+					echo(sprintf('%.2f',$data['apuestas']['segundo']));
 				}
 				else{ 
 					if( !empty($data['apuestas']['ganador']) ) echo('&nbsp;-&nbsp;');
 					else echo('&nbsp;'); 
 				} ?>
 				</td>
-				<td class="third">
+				<td>
 				<?php
 				if( !empty($data['apuestas']['tercero']) ){
-					echo(sprintf('%.2F',$data['apuestas']['tercero']));
+					echo(sprintf('%.2f',$data['apuestas']['tercero']));
 				}
 				else{ 
 					if( $count <= 3 ) echo('&nbsp;-&nbsp;');
@@ -78,7 +78,9 @@ foreach( $results as $key => $result ){
 		</tbody>
 		<tfoot></tfoot>
 	</table>
-	<br/>
+</div>
+<br/>
+<div class="race-results">
 	<table class="content" id="ERR">
 		<thead>
 			<tr><th colspan="3">DIVIDENDOS</th></tr>
@@ -90,9 +92,9 @@ foreach( $results as $key => $result ){
 				$ordenes[$i] = ltrim($ordenes[$i],' 0');
 			$html = "\t\t\t".'<tr><td>'.$apuesta['nombre'].'</td>';
 			$html.= '<td>'.implode(' - ',$ordenes).'</td>';
-			$html.= '<td style="text-align:right;padding-right:10px;">';
+			$html.= '<td style="text-align:center;">';
 			if( !empty($apuesta['importe']) ){
-				$html.= sprintf('%.2F',$apuesta['importe']);
+				$html.= sprintf('%.2f',$apuesta['importe']);
 			} else $html.= strtoupper($apuesta['descripcio']);
 			$html.= '</td>'."\n\t\t\t".'</tr>';
 			echo $html;
