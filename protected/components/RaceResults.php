@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *
  */
 Yii::import('zii.widgets.CPortlet');
 
@@ -29,7 +29,7 @@ class RaceResults extends CPortlet
 	public function getRaceEntries()
 	{
 		$criteria = new CDbCriteria;
-		$criteria->select = 'orden, puesto, difere, divipa';
+		$criteria->select = 'orden, ejemplar, puesto, difere, divipa';
 		$criteria->condition = 'fecha=:meeting_date AND carrera=:race_number';
 		$criteria->params = array(':meeting_date' => $this->date, ':race_number' => $this->race->number);
 		$criteria->order = 'puesto';

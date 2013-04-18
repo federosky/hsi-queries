@@ -184,4 +184,11 @@ div.tratado{
 	font-weight:bold;
 }
 
+.race-results .standing {width:8%;}
+.race-results .spc {padding-left:20px; width:28%;}
+
+.race-results .bet-name {padding-left:20px;width:45%;text-transform:uppercase;}
+.race-results .bet-orders {width:30%;}
+.race-results .bet-pay {width:25%; text-align: right;}
+
 .race-result td.order {text-align:right;}
